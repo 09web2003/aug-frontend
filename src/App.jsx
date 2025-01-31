@@ -12,6 +12,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/edit/:id" element={<Jobs />} />
       </Routes>
       <Toaster />
     </BrowserRouter>

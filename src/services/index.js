@@ -33,3 +33,24 @@ export async function addJob({ data }) {
     });
     return response;
 }
+
+export async function getJob(id) {
+    const response = await fetch(`${API_URL}/job/${id}`, {
+        headers: {
+            "Authorization": `${localStorage.getItem("token")}`
+        }
+    });
+    return response;
+}
+
+export async function updateJob({ id, data }) {
+    const response = await fetch(`${API_URL}/job/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `${localStorage.getItem("token")}`
+        }
+    });
+    return response;
+}
