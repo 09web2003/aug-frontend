@@ -8,7 +8,7 @@ export default function Login() {
     const token = localStorage.getItem("token")
     console.log(token)
     if (token) {
-        navigate("/jobs")
+        navigate("/listing")
     }
     const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({

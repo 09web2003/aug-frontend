@@ -4,6 +4,7 @@ import Register from './pages/register'
 import Login from './pages/login'
 import Jobs from './pages/jobs'
 import { Toaster } from 'react-hot-toast'
+import Listing from './pages/listing'
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/listing" element={<Listing />} />
         <Route path="/edit/:id" element={<Jobs />} />
       </Routes>
       <Toaster />
